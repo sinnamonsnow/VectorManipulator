@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <sstream>
 #include <cstdlib>
@@ -182,15 +183,16 @@ int main() {
 	cout<<"\nv4 = "<<vtos(vect4)<<endl;
 	cout<<"v5 = "<<vtos(vect5)<<endl;
 	cout<<"v6 = "<<vtos(vect6)<<endl;
-	cout<<"\nv4*(v5 + v6) "; // part 7
-	if(equal(dot(vect4,add(vect5,vect6),add(dot(vect4,vect5),dot(vect4,vect6))))==true)
+	cout<<"\nv4*(v5 + v6) ";
+
+	if(dot(vect4,add(vect5,vect6)) == (dot(vect4,vect5)+dot(vect4,vect6)))
 		cout<<"= ";
 	else
 		cout<<"<> ";
 	cout<<"v4*v5 + v4*v6 "<<endl;
-	cout<<"(v4+v5)/|v4+v5| = "<<vtos(mult(add(vect4,vect5),1/length(add(vect4,vect5))))<<endl; //part8
-	cout<<"v5/|v5+v6| + v6/|v5+v6| = "<<vtos(add(mult(vect5,1/length(add(vect5,vect6))),mult(vect6,1/length(add(vect5,vect6)))))<<endl; //part 9
-	cout<<"(v4+v5)/|v4+v5| "; //part 10
+	cout<<"(v4+v5)/|v4+v5| = "<<vtos(mult(add(vect4,vect5),1/length(add(vect4,vect5))))<<endl;
+	cout<<"v5/|v5+v6| + v6/|v5+v6| = "<<vtos(add(mult(vect5,1/length(add(vect5,vect6))),mult(vect6,1/length(add(vect5,vect6)))))<<endl;
+	cout<<"(v4+v5)/|v4+v5| ";
 	if(equal(mult(add(vect4,vect5),1/length(add(vect4,vect5))),add(mult(vect5,1/length(add(vect5,vect6))),mult(vect6,1/length(add(vect5,vect6)))))==true)
 		cout<<"= ";
 	else
