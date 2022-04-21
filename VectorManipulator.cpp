@@ -190,5 +190,8 @@ int main() {
 	else
 		cout<<"<> ";
 	cout<<"v5/|v5+v6| + v6/|v5+v6|"<<endl;
+	delete [] vect4;
+	delete [] vect5;
+	delete [] vect6;
 	return 0;
 }
